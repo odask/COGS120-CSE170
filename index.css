@@ -1,0 +1,15 @@
+h1 {
+  font-family: sans-serif;
+  padding-top: 30%;
+  margin: 8%;
+  font-size: 36px;
+}
+
+::-webkit-input-placeholder{
+  font-style: oblique;
+}
+
+form {
+  margin-left: 10%;
+  margin-right: 10%;
+}
