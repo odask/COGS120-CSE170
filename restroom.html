@@ -5,7 +5,23 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-theme.min.css" rel="stlesheet">
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+ $(document).ready(function(){
+    $("#plus_preferences").click(function(){
+        $("#bathpreference").slideToggle();
+    });
+    $("#plus_building").click(function(){
+        $("#buildingPreference").slideToggle();
+    });
+
+});
+
+</script>
 </head>
 <body>
 
@@ -31,9 +47,9 @@
     <input type="checkbox" name="nearme" value="nearme"> Near Me <br>
     </form> 
 
-    <h3 id="preferences">Preferences</h3>
+    <h3 id="preferences">Preferences <img id="plus_preferences" src="icons/add-plus-button.png" /></h3>
     <div>
-        <form class="w3-container w3-center" id="bathPreference">
+        <form class="w3-container w3-center" id="bathpreference">
             <input type="checkbox" name="option1" value="female"> Female<br>
             <input type="checkbox" name="option2" value="male"> Male <br>
             <input type="checkbox" name="option2" value="gn"> Gender Neutral <br>
@@ -41,14 +57,15 @@
         </form> 
     </div>
     <br>
-    <h3 id="building">Building</h3>
+    <h3 id="building">Building <img id="plus_building" src="icons/add-plus-button.png" /></h3>
     <div>
-        <form class="w3-container w3-center" id="bathPreference">
+        <form class="w3-container w3-center" id="buildingPreference">
             <input type="checkbox" name="location1" value="geisel"> Geisel Library<br>
             <input type="checkbox" name="location2" value="pc"> Price Center <br>
            
         </form> 
     </div>
+ 
     <br>
   </div>
 
