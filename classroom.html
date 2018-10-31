@@ -4,6 +4,10 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+<link rel="stylesheet" href="css/classroom.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/classroom.js"></script>
 
 <body>
 
@@ -13,6 +17,36 @@
       <button class="w3-button w3-xxlarge w3-hover-theme" onclick="window.location.href='index.html'"><i class=" w3-xxlarge fa fa-user"></i></button>
     </div>
   </header>
+
+  <h2 align="center">Preferences</h2>
+<div class="nav-primary" align="center">
+
+  <div class="mainMenu">
+    <form> <h4 align="center" id="building_preference">Building   <i class="w3-small fas fa-plus"></i></h4>
+        <div class="subMenu">
+          <input type="radio" id="geisel" name="building" value="geisel"> Geisel Library<br>
+          <input type="radio" id="centerhall" name="building" value="centerhall"> Center Hall<br>
+        </div>
+    </form>
+  </div>
+
+  <div class="room_preferences1">
+    <form> <h4 align="center" id="room_preference1">Room  <i class="w3-small fas fa-plus"></i></h4>
+      <input type="radio" id="101" name="room" value="101"> 101<br>
+      <input type="radio" id="102" name="room" value="102"> 102<br>
+    </form>
+  </div>
+
+  <div class="room_preferences2">
+    <form> <h4 align="center" id="room_preference2">Room  <i class="w3-small fas fa-plus"></i></h4>
+      <input type="radio" id="103" name="room" value="101"> 103<br>
+      <input type="radio" id="104" name="room" value="102"> 104<br>
+    </form>
+  </div>
+  <br>
+  <button id="search1" class="button button5" onclick="window.location.href='searching_category.html'">Search</button>
+
+</div>
 
 </body>
 </html>

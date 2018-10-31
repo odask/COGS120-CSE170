@@ -1,0 +1,23 @@
+.subMenu {
+    display: none;
+}
+
+.room_preferences1 {
+  display: none;
+}
+
+.room_preferences2 {
+  display: none;
+}
+
+#search1 {
+  display: none;
+}
+
+.button5 {
+    background-color: white;
+    color: black;
+    border: 1px solid #555555;
+    padding: 5px;
+    border-radius: 5px;
+}
