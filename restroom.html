@@ -2,12 +2,14 @@
 <html>
 <head>
 <title>Search Result</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/bootstrap-theme.min.css" rel="stlesheet">
+<link href="css/restroom.css" rel="stlesheet">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/restroom.js"></script>
@@ -16,7 +18,7 @@
 <body>
 
   <header class="w3-bar w3-card w3-theme">
-    <button class="w3-bar-item w3-button w3-xxlarge w3-hover-theme" onclick="window.location.href='index.html'"><i class=" w3-xxlarge fas fa-map-marked-alt"></i></button>
+    <button class="w3-bar-item w3-button w3-xxlarge w3-hover-theme" onclick="window.location.href='index.html'"><i class="fas fa-arrow-alt-circle-left"></i></button>
     <div class="w3-right">
       <button class="w3-button w3-xxlarge w3-hover-theme" onclick="window.location.href='index.html'"><i class=" w3-xxlarge fa fa-user"></i></button>
     </div>
@@ -35,7 +37,7 @@
     <br>
     <form>
     <input type="checkbox" name="nearme" value="nearme"> Near Me <br>
-    </form> 
+    </form>
 
     <h3 id="preferences">Preferences <img id="plus_preferences" src="icons/add-plus-button.png" /></h3>
     <div>
@@ -44,7 +46,7 @@
             <input type="checkbox" name="option2" value="male"> Male <br>
             <input type="checkbox" name="option2" value="gn"> Gender Neutral <br>
             <input type="checkbox" name="option3" value="handicap"> Handicap <br>
-        </form> 
+        </form>
     </div>
     <br>
     <h3 id="building">Building <img id="plus_building" src="icons/add-plus-button.png" /></h3>
@@ -52,10 +54,10 @@
         <form class="w3-container w3-center" id="buildingPreference">
             <input type="checkbox" name="location1" value="geisel"> Geisel Library<br>
             <input type="checkbox" name="location2" value="pc"> Price Center <br>
-           
-        </form> 
+
+        </form>
     </div>
- 
+
     <br>
   </div>
 
