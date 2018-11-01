@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<title>Other</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+<link href="css/others.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/others.js"></script>
 
 </head>
 <body>
@@ -16,6 +20,54 @@
       <button class="w3-button w3-xxlarge w3-hover-theme" onclick="window.location.href='index.html'"><i class=" w3-xxlarge fa fa-user"></i></button>
     </div>
   </header>
+
+  <h1 align="center">WHERE TO GO</h1>
+  <h2 align="center">Other Places</h2>
+<div class="nav-primary" align="center">
+
+  <div class="mainMenu">
+    <form> <h4 align="center" id="study_rooms">Study Rooms   <i class="w3-small fas fa-plus"></i></h4>
+        <div class="subMenu">
+          <input type="radio" id="geisel" name="building" value="geisel"> Geisel Library<br>
+          <input type="radio" id="pc" name="building" value="pc"> PC<br>
+          
+        </div>
+    </form>
+    <form> <h4 align="center" id="food">Food Near Me   <i class="w3-small fas fa-plus"></i></h4>
+      <div class="foodSubMenu">
+        <input type="radio" id="pc_food" name="building" value="pc_food"> PC<br>
+        
+      </div>
+  </form>
+  </div>
+
+  <div class="room_preferences1">
+    <form> <h4 align="center" id="room_preference1">Room  <i class="w3-small fas fa-plus"></i></h4>
+      <input type="radio" id="205" name="room" value="205"> 205<br>
+      <input type="radio" id="206" name="room" value="206"> 206<br> 
+    </form>
+  </div>
+
+  <div class="room_preferences2">
+    <form> <h4 align="center" id="room_preference2">Room  <i class="w3-small fas fa-plus"></i></h4>
+      <input type="radio" id="100" name="room" value="100"> 100<br>
+      <input type="radio" id="101" name="room" value="101"> 101<br>
+      <input type="radio" id="102" name="room" value="102"> 102<br>
+    </form>
+  </div>
+
+  <div class="food_pc">
+    <form> <h4 align="center" id="food_pc"></h4>
+      <input type="radio" id="bk" name="room" value="bk"> Burger King<br>
+      <input type="radio" id="santorini" name="room" value="santorini"> Santorini<br>
+      <input type="radio" id="pex" name="room" value="pex"> Panda Express<br>
+    </form>
+  </div>
+
+  <br>
+  <button id="search1" class="button button5" onclick="window.location.href='directions.html'">Search</button>
+
+</div>
 
 </body>
 </html>
