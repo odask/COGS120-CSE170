@@ -6,21 +6,68 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-</head>
+
+<link rel="stylesheet" href="css/searching_category.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/searching_category.js"></script>
+
 <script>
 function goBack() {
     window.history.back();
 }
 </script>
-
+</head>
 <body>
 
   <header class="w3-bar w3-card w3-theme">
     <button class="w3-bar-item w3-button w3-xxlarge w3-hover-theme" onclick="goBack()"><i class="fas fa-arrow-alt-circle-left"></i></button>
-    <div class="w3-right">
-      <button class="w3-button w3-xxlarge w3-hover-theme" onclick="window.location.href='index.html'"><i class=" w3-xxlarge fa fa-user"></i></button>
-    </div>
+
   </header>
+
+<br>
+
+<div align="center" style="font-size:20px">Female Bathroom</div>
+<div align="center" style="font-size:20px">Geisel Library</div>
+
+<br>
+
+<div class="option1">
+    FEMALE BATHROOM <div style="float: right;"> 0.1 miles</div>
+  <span class="hide hidden">&#9650;</span>
+  <span class="show">&#9660;</span>
+</div>
+<div class="decription hidden">
+  <div class="row">
+    <div class="column" style="background-color:#eee;">
+      <img src="restroom_lady.png" style="width:100%; height:240px">
+    </div>
+    <div class="column" style="background-color:#eee;" align="center">
+      <h2>Naigation</h2>
+      <br>
+      <button class="w3-round-large w3-button w3-border w3-xlarge" onclick="window.location.href='directions.html'">Start</button>
+    </div>
+  </div>
+</div>
+
+<div class="option2">
+    FEMALE BATHROOM <div style="float: right;"> 0.2 miles</div>
+  <span class="hide hidden">&#9650;</span>
+  <span class="show">&#9660;</span>
+</div>
+<div class="decription2 hidden">
+  <div class="row">
+    <div class="column" style="background-color:lightgray;">
+      <img src="restroom_lady.png" style="width:100%; height:240px">
+    </div>
+    <div class="column" style="background-color: lightgray;" align="center">
+      <h2>Naigation</h2>
+      <br>
+      <button class="w3-round-large w3-button w3-border w3-xlarge" onclick="window.location.href='directions.html'">Start</button>
+    </div>
+  </div>
+</div>
+
 
 </body>
 </html>
