@@ -1,4 +1,6 @@
  $(document).ready(function(){
+    
+    
     $("#plus_preferences").click(function(){
         $("#bathpreference").slideToggle();
     });
