@@ -31,4 +31,13 @@
         }
     });
 
+    $("#dropdown").on("change", function() {
+        if (this.value == "classroom"){
+            window.location.href='classroom.html';
+        }
+        else if (this.value == "other"){
+            window.location.href='other_catergories.html';
+        }
+     });
+
 });
