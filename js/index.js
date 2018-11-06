@@ -117,6 +117,7 @@ $(document).ready(function() {
         console.log(searchBar_input);
         if (searchBar_input == 'Geisel Library'){
             window.location.href='map.html';
+            window.localStorage.setItem('place', 'geisel_default');
         }
         
     }); 

@@ -13,5 +13,8 @@ $(document).ready(function(){
         
         $('#myMap').attr('src', "http://mwz.io/f/p/ucsd/entrance/t/p/ucsd/bathroom_east_2?k=5917a04807958398&z=18");
     }
+    else {
+        $('#myMap').attr('src', "http://mwz.io/v/ucsd?k=5917a04807958398&z=18");
+    }
 
 });
