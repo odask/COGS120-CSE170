@@ -116,7 +116,7 @@ $(document).ready(function() {
         var searchBar_input = document.getElementById("myInput").value;
         console.log(searchBar_input);
         if (searchBar_input == 'Geisel Library'){
-            window.location.href='testmap.html';
+            window.location.href='map.html';
         }
         
     }); 
