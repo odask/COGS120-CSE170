@@ -6,15 +6,35 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+<link rel="stylesheet" href="https://api.mazemap.com/js/v2.0.11/mazemap.min.css">
+<link rel="stylesheet" href="css/arrived.css">
+
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
+ <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+   integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+   crossorigin=""></script>
 </head>
 <body>
 
-  <header class="w3-bar w3-card w3-theme">
-    <button class="w3-bar-item w3-button w3-xxlarge w3-hover-theme" onclick="window.location.href='index.html'"><i class="fas fa-arrow-alt-circle-left"></i></button>
-    <div class="w3-right">
-      <button class="w3-button w3-xxlarge w3-hover-theme" onclick="window.location.href='index.html'"><i class=" w3-xxlarge fa fa-user"></i></button>
-    </div>
-  </header>
+    <div id="mapid" style="width: 600px; height: 400px;"></div>
+    <script>
+    
+      var mymap = L.map('mapid').setView([32.88043, -117.23756], 20);
+    
+      L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+        maxZoom: 18,
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+          '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+          'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        id: 'mapbox.streets'
+      }).addTo(mymap);
 
-</body>
+      var marker = L.marker([32.88043, -117.23756]).addTo(mymap);
+    
+    </script>
+    
+    
 </html>
