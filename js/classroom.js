@@ -32,7 +32,7 @@ $(document).ready(function(){
      });
 
      $('#searchBtn').click(function (){
-        localStorage.setItem('place', 'Classroom'); 
+        localStorage.setItem('place', 'Classroom');
         window.location.href='map.html';
 
      });

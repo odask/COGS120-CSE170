@@ -4,6 +4,9 @@
 
 .room_preferences2 {
   display: none;
+  height: 200px;
+  max-height: 250px;
+
 }
 
 #search1 {
