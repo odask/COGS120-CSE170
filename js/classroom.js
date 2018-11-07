@@ -11,6 +11,7 @@ $(document).ready(function(){
          } else if ($('input[name=building]:checked').val() == "centerhall") {
              $('.room_preferences2').show();
              $('.room_preferences1').hide();
+             $('.first_floor').show();
 
          }
      });
@@ -28,6 +29,17 @@ $(document).ready(function(){
         }
         else if (this.value == "other"){
             window.location.href='other_catergories.html';
+        }
+     });
+
+     $('#dropdown_floor').on("change", function() {
+        if (this.value == "1_floor"){
+            $('.first_floor').show();
+            $('.second_floor').hide();
+        }
+        else if (this.value == "2_floor"){
+            $('.first_floor').hide();
+            $('.second_floor').show();
         }
      });
 

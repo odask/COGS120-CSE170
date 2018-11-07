@@ -9,7 +9,15 @@
 
 }
 
-#search1 {
+#searchBtn {
+  display: none;
+}
+
+.first_floor {
+  display: none;
+}
+
+.second_floor {
   display: none;
 }
 
