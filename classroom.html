@@ -30,6 +30,7 @@
   <div class="mainMenu">
     <form> <h4 align="center" id="building_preference">Building   <i class="w3-small fas fa-plus"></i></h4>
         <div class="subMenu">
+          <input type="radio" id="geisel" name="building" value="geisel"> Geisel Library<br>
           <input type="radio" id="centerhall" name="building" value="centerhall"> Center Hall<br>
         </div>
     </form>
@@ -37,8 +38,8 @@
 
   <div class="room_preferences1">
     <form> <h4 align="center" id="room_preference1">Room  <i class="w3-small fas fa-plus"></i></h4>
-      <input type="radio" id="101" name="room" value="101"> 200<br>
-      <input type="radio" id="102" name="room" value="102"> 201<br>
+      <input type="radio" id="101" name="room" value="101"> 1 & 2<br>
+
     </form>
   </div>
 
@@ -46,11 +47,13 @@
     <form > <h4 align="center" id="room_preference2">Room  <i class="w3-small fas fa-plus"></i></h4>
 
       <select id="dropdown_floor" name="floor_options">
-        <option value="1_floor">1st Floor</option>
-        <option value="2_floor">2nd Floor</option>
+        <option id="first" name="floor_options" value="1_floor">1. Floor</option>
+        <option id="second" name="floor_options" value="2_floor">2. Floor</option>
       </select>
 
-      <div  class="first_floor" style="max-height:10%; overflow:auto;">
+      <br>
+
+      <div class="first_floor">
         <input type="radio" id="101" name="room" value="101"> 101<br>
         <input type="radio" id="105" name="room" value="105"> 105<br>
         <input type="radio" id="109" name="room" value="109"> 109<br>
@@ -59,7 +62,7 @@
         <input type="radio" id="119" name="room" value="119"> 119<br>
       </div>
 
-      <div  class="second_floor" style="max-height:10%; overflow:auto;">
+      <div  class="second_floor">
         <input type="radio" id="201" name="room" value="201"> 201<br>
         <input type="radio" id="202" name="room" value="202"> 202<br>
         <input type="radio" id="203" name="room" value="203"> 203<br>
