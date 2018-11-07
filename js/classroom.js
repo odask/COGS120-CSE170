@@ -30,4 +30,10 @@ $(document).ready(function(){
             window.location.href='other_catergories.html';
         }
      });
+
+     $('#searchBtn').click(function (){
+        localStorage.setItem('place', 'Classroom'); 
+        window.location.href='map.html';
+
+     });
 });
