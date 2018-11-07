@@ -24,6 +24,9 @@ $(document).ready(function(){
     else if (place == 'audreys'){
         $('#myMap').attr('src', "https://maps.mapwize.io/#/f/p/ucsd/entrance/t/p/ucsd/audrey_s?k=5917a04807958398&z=20.34");
     }
+    else if (place == 'geisel_study'){
+        $('#myMap').attr('src', "https://maps.mapwize.io/#/f/p/ucsd/entrance/t/p/ucsd/group_study_room?k=5917a04807958398");
+    }
     
     else {
         $('#myMap').attr('src', "https://maps.mapwize.io/#/v/ucsd/0?k=5917a04807958398&z=18");

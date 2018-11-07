@@ -2,6 +2,8 @@ $(document).ready(function(){
     
     
     var place_selected = false;
+    var study_flag = false;
+    var place;
     
     $("#study_rooms").click(function(){
         if (place_selected == false){
@@ -14,6 +16,7 @@ $(document).ready(function(){
             $(".room_preferences1, .room_preferences2, #search1").css("display", "none");
           
         }
+        study_flag = true;
         
     });
 
@@ -21,6 +24,7 @@ $(document).ready(function(){
         if (place_selected == false){
             $(".foodSubMenu").slideToggle();
             place_selected = true;
+            
         }
         else {
             $(".foodSubMenu").slideToggle();
@@ -28,7 +32,8 @@ $(document).ready(function(){
             $(".food_pc, #search1").css("display", "none");
           
         }
-        
+       
+        study_flag = false;
     });
 
     $('#geisel_food').click(function() {
@@ -70,8 +75,28 @@ $(document).ready(function(){
      });
 
      $("#searchBtn").click(function() {
-        window.localStorage.setItem('place', 'audreys');
-        window.location.href='map.html';
-        });
+        if (study_flag){
+            //get what's selected
+            place = $("input[name=building]:checked").val();
+            if (place == 'geisel'){
+                window.localStorage.setItem('place', 'geisel_study');
+                window.location.href='map.html';
+            }
+        }
+        else {
+            //check if it's Geisel
+            //get the Radio value
+            place = $("input[name=building_food]:checked").val();
+            if (place == 'geisel_food'){
+                window.localStorage.setItem('place', 'audreys');
+                window.location.href='map.html';
+            }
+            else {
+                //something for PC, empty for now
+            }
+            
+        }
+        
+    });
 
 });
