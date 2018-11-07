@@ -31,6 +31,10 @@ $(document).ready(function(){
         
     });
 
+    $('#geisel_food').click(function() {
+        $('.food_pc').hide();
+        $('#searchBtn').show();
+    });
 
 
     $("input[name=building]:radio").click(function () {
@@ -52,7 +56,7 @@ $(document).ready(function(){
     $("input[name=room]:radio").click(function() {
         if($('input[name=room]:checked').val() == "205" || $('input[name=room]:checked').val() == "206" ||
         $('input[name=room]:checked').val() == "bk"){
-          $('#search1').show();
+          $('#searchBtn').show();
         }
     });
 
@@ -64,5 +68,10 @@ $(document).ready(function(){
             window.location.href='restroom.html';
         }
      });
+
+     $("#searchBtn").click(function() {
+        window.localStorage.setItem('place', 'audreys');
+        window.location.href='map.html';
+        });
 
 });

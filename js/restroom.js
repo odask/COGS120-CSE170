@@ -40,4 +40,27 @@
         }
      });
 
+    //what does clicking search do?
+    //gets the preference and building
+    //saves it into local storage
+    //then goes to searching_category_template page
+    $("#searchBtn").click(function() {
+        //Get the preference
+        var pref = $('input[name="option"]:checked');
+       
+        var checkboxValues = [];
+        $('input[name=option]:checked').map(function() {
+            checkboxValues.push($(this).val());
+        });
+        console.log(checkboxValues);
+        //Get the building
+        var location = $('input[name="location"]:checked');
+        //save them in local storage
+        localStorage.setItem('preference', pref[0].value);
+        localStorage.setItem('preference2', JSON.stringify(checkboxValues));
+        localStorage.setItem('building', location[0].value);
+        //go to searching_category_template
+        window.location.href='searching_category_template.html';
+        });
+
 });
