@@ -15,6 +15,17 @@ $(document).ready(function(){
          }
      });
 
+     $('.second_floor').hide();
+     $("#dropdown_floor").on("change", function() {
+        if (this.value == "1_floor"){
+          $('.second_floor').hide();
+          $('.first_floor').show();
+        } else {
+            $('.first_floor').hide();
+            $('.second_floor').show();
+        }
+     });
+
      $("input[name=room]:radio").click(function() {
        if($('input[name=room]:checked').val() == "101"){
          $('#search1').show();

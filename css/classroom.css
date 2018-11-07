@@ -4,8 +4,17 @@
 
 .room_preferences2 {
   display: none;
-  height: 200px;
-  max-height: 250px;
+}
+
+.first_floor {
+  max-height:130px;
+  overflow:auto;
+}
+
+.second_floor {
+  display: none;
+  max-height:130px;
+  overflow:auto;
 
 }
 
@@ -19,4 +28,7 @@
     border: 1px solid #555555;
     padding: 5px;
     border-radius: 5px;
+}
+#dropdown_floor{
+  margin-bottom: 10px;
 }
