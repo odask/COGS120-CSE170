@@ -12,7 +12,6 @@ $(document).ready(function(){
              $('.room_preferences2').show();
              $('.room_preferences1').hide();
              $('.first_floor').show();
-
          }
      });
 
@@ -29,7 +28,7 @@ $(document).ready(function(){
 
      $("input[name=room]:radio").click(function() {
        if($('input[name=room]:checked').val() == "101"){
-         $('#search1').show();
+         $('#searchBtn').show();
        }
 
      });
