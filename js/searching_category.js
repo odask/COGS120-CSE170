@@ -5,13 +5,17 @@ jQuery(function($) {
   //var preference = localStorage.getItem('preference');
   var building = localStorage.getItem('building');
   var preference = JSON.parse(localStorage.getItem('preference2'));
+  var nearMe = localStorage.getItem('nearMe');
 
   console.log(preference);
   console.log(building);
   //console.log(preference2);
 
-  if (building) {
+  if (building != 'none') {
     $("#building_name").text(building);
+  }
+  else {
+    $("#building_name").text("Cognitive Science Building");
   }
 
   
@@ -29,6 +33,7 @@ jQuery(function($) {
     if (preference){
       $("#bathroom_name1").text(preference);
       $("#bathroom_name2").text(preference);
+      $("#csb_bathroom").text(preference);
      }
     // else if (preference == 'Gender Neutral'){
     //   $("#bathroom_name1").text("BATHROOM");
@@ -38,6 +43,11 @@ jQuery(function($) {
     
 
   $(".option1").click(function() {
+    $(this).next(".decription").stop().slideToggle(500);
+    $(this).find(".hide, .show").toggle();
+  });
+
+  $(".nearMe").click(function() {
     $(this).next(".decription").stop().slideToggle(500);
     $(this).find(".hide, .show").toggle();
   });
@@ -63,6 +73,9 @@ jQuery(function($) {
       });
 
   
-  
+  $("#nearMeBtn").click(function() {
+    window.localStorage.setItem('place', 'csb');
+    window.location.href='map.html';
+    });
 
 });

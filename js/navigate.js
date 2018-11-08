@@ -27,6 +27,9 @@ $(document).ready(function(){
     else if (place == 'geisel_study'){
         $('#myMap').attr('src', "https://maps.mapwize.io/#/f/p/ucsd/entrance/t/p/ucsd/group_study_room?k=5917a04807958398");
     }
+    else if (place == 'csb'){
+        $('#myMap').attr('src', "https://maps.mapwize.io/#/f/p/cognitive_science_building/csb_180/t/p/cognitive_science_building/bathroom_m?k=32c095f4e615a71b&z=19.895");
+    }
     
     else {
         $('#myMap').attr('src', "https://maps.mapwize.io/#/v/ucsd/0?k=5917a04807958398&z=18");

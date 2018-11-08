@@ -31,6 +31,8 @@ $(document).ready(function(){
        }
    });
 
+
+
    $("#dropdown").on("change", function() {
        if (this.value == "classroom"){
            window.location.href='classroom.html';
@@ -46,19 +48,48 @@ $(document).ready(function(){
    //then goes to searching_category_template page
    $("#searchBtn").click(function() {
        //Get the preference
-       var pref = $('input[name="option"]:checked');
+       //var pref = $('input[name="option"]:checked');
 
        var checkboxValues = [];
        $('input[name=option]:checked').map(function() {
            checkboxValues.push($(this).val());
        });
        console.log(checkboxValues);
-       //Get the building
        var location = $('input[name="location"]:checked');
+       console.log(location.length);
+       //Get Near me checkbox value(T/F)
+       var nearMe = $('input[name=nearme]').prop('checked');
+       if (nearMe){
+            
+            console.log("NearMe checked");
+            console.log(nearMe);
+            localStorage.setItem('nearMe', nearMe);
+            //building is optional
+            console.log(localStorage.getItem('nearMe'));
+            if (location.length != 0){
+                //add it
+                console.log("I went here");
+                localStorage.setItem('building', location[0].value);
+            }
+            else {
+                console.log("Else clause");
+                localStorage.setItem('building', "none");
+            }
+
+       } else {
+           console.log("NearMe NOT checked");
+           localStorage.setItem('nearMe', false);
+           console.log(localStorage.getItem('nearMe'));
+           //We need to specify the building
+           //Get the building
+           localStorage.setItem('building', location[0].value);
+       }
+      
+       
        //save them in local storage
-       localStorage.setItem('preference', pref[0].value);
+       //localStorage.setItem('preference', pref[0].value);
        localStorage.setItem('preference2', JSON.stringify(checkboxValues));
-       localStorage.setItem('building', location[0].value);
+       
        //go to searching_category_template
        window.location.href='searching_category_template.html';
        });
