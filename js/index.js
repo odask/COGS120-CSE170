@@ -102,7 +102,7 @@ function autocomplete(inp, arr) {
   }
 
 
-  var countries = ["Price Center","Center Hall","Geisel Library","CSE","CSB","PC","Wells Fargo Building","Jacobs","Galbraith","Biomed Library"];
+  var countries = ["Price Center","Center Hall","Geisel Library","CSE","CSB","Cognitive Science Building","PC","Wells Fargo Building","Jacobs","Galbraith","Biomed Library"];
 
   function myFuckingFunction() {
     alert("The form was submitted");
@@ -118,6 +118,10 @@ $(document).ready(function() {
         if (searchBar_input == 'Geisel Library'){
             window.location.href='map.html';
             window.localStorage.setItem('place', 'geisel_default');
+        }
+        else if (searchBar_input == "CSB" || searchBar_input == "Cognitive Science Building"){
+          window.location.href='map.html';
+          window.localStorage.setItem('place', 'csb');
         }
         
     }); 
