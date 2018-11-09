@@ -27,6 +27,7 @@ jQuery(function($) {
     console.log("Gender neutral option");
     $("#bathroom_name1").text("BATHROOM");
     $(".option2").hide();
+    $(".nearMe").hide();
 
   }
   else {
