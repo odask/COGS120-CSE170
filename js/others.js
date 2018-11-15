@@ -31,6 +31,33 @@
         }
     });
 
+    $("#searchBtn").click(function() {
+        var places = [];
+        $('input[name=option]:checked').map(function() {
+            places.push($(this).val());
+        });
+
+        var locations = [];
+        $('input[name=location]:checked').map(function() {
+            locations.push($(this).val());
+        });
+
+        console.log(places);
+        console.log(locations);
+        if (places == 'foodplaces' && locations == 'geisel'){
+            window.localStorage.setItem('place', 'audreys');
+            window.location.href='map.html';
+        }
+        else {
+            window.location.href='other_searching_list.html';
+        }
+
+
+            
+
+        
+    });
+
 /*    $("#dropdown").on("change", function() {
         if (this.value == "classroom"){
             window.location.href='classroom.html';

@@ -18,11 +18,13 @@ function goBack() {
 </script>
 <body>
 
-  <header class="w3-bar w3-card w3-theme">
-    <button class="w3-bar-item w3-button w3-xxlarge w3-hover-theme" onclick="goBack()"><i class="fas fa-arrow-alt-circle-left"></i></button>
-  </header>
+        <header class="w3-bar w3-card w3-theme">
+                <button class="w3-bar-item w3-button w3-xxlarge w3-hover-theme" onclick="window.location.href='index.html'"><i class="fas fa-home"></i></button>
+                <button class="w3-bar-item w3-button w3-xxlarge w3-hover-theme" onclick="goBack()"><i class="fas fa-arrow-alt-circle-left"></i></button>
+                
+        </header>
 
-  <div id="map" class="mazemap"></div>
+  <div id="map" class="mazemap" style="width:100%; height:60%;margin-top:75px"></div>
 
     <script>
         var map = new Mazemap.Map({
@@ -44,8 +46,5 @@ function goBack() {
         map.addControl(new Mazemap.mapboxgl.NavigationControl());
     </script> 
 
-<div class="container">
-<button class="w3-round-large w3-button w3-border btn" onclick="window.location.href='index.html'">Cancel</button>
-</div>
 </body>
 </html>
