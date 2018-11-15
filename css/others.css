@@ -25,7 +25,13 @@
  .food_pc {
      display: none;
  }
+ #otherplace {
+   display: none;
+ }
 
+ #buildingPreference {
+   display: none;
+ }
 
   .button5 {
     background-color: white;

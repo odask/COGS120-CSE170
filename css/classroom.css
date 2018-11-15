@@ -49,3 +49,6 @@
 #dropdown_floor{
   margin-bottom: 10px;
 }
+#buildingpreference {
+  display: none;
+}
