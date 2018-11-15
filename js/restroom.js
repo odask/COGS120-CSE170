@@ -45,6 +45,18 @@ $(document).ready(function(){
        }
     });
 
+    $('input[name=nearme]:checkbox').change(function(){
+        if(this.checked){
+            //hide building
+            $('#buildingDiv').fadeOut();
+            $('#building').fadeOut();
+        }  
+        else
+           //show building selection when nearme is unchecked
+           $('#buildingDiv').show();
+           $('#building').show();
+     });
+
    //what does clicking search do?
    //gets the preference and building
    //saves it into local storage
@@ -69,6 +81,7 @@ $(document).ready(function(){
             localStorage.setItem('nearMe', nearMe);
             //building is optional
             console.log(localStorage.getItem('nearMe'));
+
             if (location.length != 0){
                 //add it
                 console.log("I went here");
