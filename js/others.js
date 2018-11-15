@@ -52,11 +52,20 @@
             window.location.href='other_searching_list.html';
         }
 
-
-
-
-
     });
+
+    $('input[name=nearme]:checkbox').change(function(){
+        if(this.checked){
+            //hide building
+            $('#buildingDiv').fadeOut();
+            $('#building').fadeOut();
+        }  
+        else
+           //show building selection when nearme is unchecked
+           $('#buildingDiv').show();
+           $('#building').show();
+     });
+
 
 /*    $("#dropdown").on("change", function() {
         if (this.value == "classroom"){
