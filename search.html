@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+
+<link rel="stylesheet" href="css/search.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/search.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+
+</head>
+<body>
+
+  <header class="w3-bar w3-card w3-theme">
+    <button class="w3-bar-item w3-button w3-xxlarge w3-hover-theme" onclick="window.location.href='index.html'"><i class="fas fa-home"></i></button>
+    <button class="w3-bar-item w3-button w3-xxlarge w3-hover-theme" onclick="goBack()"><i class="fas fa-arrow-alt-circle-left"></i></button>
+  </header>
+
+  <h1 align="center">Where To Go</h1>
+  <div class="w3-container w3-center">
+  <select id="dropdown" name="Options">
+    <option value="search">Search</option>
+    <option value="bathroom">Bathroom</option>
+    <option value="classroom">Classroom</option>
+    <option value="other">Other</option>
+  </select>
+  </div>
+
+<ul class="w3-container w3-center">
+    <!-- <input class="w3-input w3-round-large w3-border" name="address" type="text" placeholder="ENTER ADDRESS"></br> -->
+
+    <form autocomplete="off" onsubmit="myFuckingFunction()">
+      <div class="autocomplete" style="width:300px;margin:auto">
+        <input id="myInput" type="text" name="myPlaces" placeholder="Address">
+      </div>
+      <br>
+      <!-- <input id="myInputButton" type="submit"> -->
+    </form>
+    <!-- <button id="searchBtn" class="w3-round-large w3-button w3-border" onclick="window.location.href='searching_category.html'">Search</button> -->
+    <button id="searchBtn" class="w3-round-large w3-button w3-border" >Search</button>
+  <script>
+      autocomplete(document.getElementById("myInput"), countries);
+  </script>
+</body>
+</html>
