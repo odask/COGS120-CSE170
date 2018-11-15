@@ -69,7 +69,7 @@ $(document).ready(function(){
        $('input[name=option]:checked').map(function() {
            checkboxValues.push($(this).val());
        });
-       console.log(checkboxValues);
+       console.log(checkboxValues.length);
        var location = $('input[name="location"]:checked');
        console.log(location.length);
        //Get Near me checkbox value(T/F)
@@ -96,7 +96,16 @@ $(document).ready(function(){
            console.log("NearMe NOT checked");
            localStorage.setItem('nearMe', false);
            console.log(localStorage.getItem('nearMe'));
-           //We need to specify the building
+           //We need to specify the building and preferences
+
+           //throw an error if location and preferences are both empty
+           if (location.length == 0 || checkboxValues.length == 0){
+                var toast = document.getElementById("snackbar");
+                toast.className = "show";
+                // After 3 seconds, remove the show class from DIV
+                setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+                return;
+           }
            //Get the building
            localStorage.setItem('building', location[0].value);
        }
@@ -111,3 +120,13 @@ $(document).ready(function(){
        });
 
 });
+function myFunction() {
+    // Get the snackbar DIV
+    var x = document.getElementById("snackbar");
+
+    // Add the "show" class to DIV
+    x.className = "show";
+
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+} 
