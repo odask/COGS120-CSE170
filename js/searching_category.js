@@ -13,24 +13,34 @@ jQuery(function($) {
 
   if (building != 'none') {
     $("#building_name").text(building);
+    if (building == 'Geisel Library'){
+      $(".nearMe").hide();
+    }
   }
   else {
     $("#building_name").text("Cognitive Science Building");
   }
 
-  
-  if (preference) {
+
+  if (preference.length > 0) {
+    console.log("we did this");
+    console.log(preference);
     $("#name").text(preference + " Bathroom");
+  } else {
+    $("#bathroom_name1").text("Male,Female");
+    $("#bathroom_name2").text("Male,Female");
+    $("#csb_bathroom").text("Male,Female");
   }
 
   if (preference.includes("Gender Neutral")){
     console.log("Gender neutral option");
     $("#bathroom_name1").text("BATHROOM");
     $(".option2").hide();
+    $(".nearMe").hide();
 
   }
   else {
-    if (preference){
+    if (preference.length > 0){
       $("#bathroom_name1").text(preference);
       $("#bathroom_name2").text(preference);
       $("#csb_bathroom").text(preference);
@@ -40,7 +50,7 @@ jQuery(function($) {
     //   $(".option2").hide();
     // }
   }
-    
+
 
   $(".option1").click(function() {
     $(this).next(".decription").stop().slideToggle(500);
@@ -72,7 +82,7 @@ jQuery(function($) {
       window.location.href='map.html';
       });
 
-  
+
   $("#nearMeBtn").click(function() {
     window.localStorage.setItem('place', 'csb');
     window.location.href='map.html';
