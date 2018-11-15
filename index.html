@@ -7,88 +7,25 @@
 <link rel="stylesheet" href="css/index.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300">
 
 
-<style>
-* { box-sizing: border-box; }
-body {
-  font: 16px Arial; 
-}
-.autocomplete {
-  /*the container must be positioned relative:*/
-  position: relative;
-  display: inline-block;
-}
-input {
-  border: 1px solid transparent;
-  background-color: #f1f1f1;
-  padding: 10px;
-  font-size: 16px;
-}
-input[type=text] {
-  background-color: #f1f1f1;
-  width: 100%;
-}
-input[type=submit] {
-  background-color: DodgerBlue;
-  color: #fff;
-}
-.autocomplete-items {
-  position: absolute;
-  border: 1px solid #d4d4d4;
-  border-bottom: none;
-  border-top: none;
-  z-index: 99;
-  /*position the autocomplete items to be the same width as the container:*/
-  top: 100%;
-  left: 0;
-  right: 0;
-}
-.autocomplete-items div {
-  padding: 10px;
-  cursor: pointer;
-  background-color: #fff; 
-  border-bottom: 1px solid #d4d4d4; 
-}
-.autocomplete-items div:hover {
-  /*when hovering an item:*/
-  background-color: #e9e9e9; 
-}
-.autocomplete-active {
-  /*when navigating through the items using the arrow keys:*/
-  background-color: DodgerBlue !important; 
-  color: #ffffff; 
-}
-</style>
-<body>
-
-
-  <div class="w3-container w3-center">
-    <h1>WHERE TO GO</h1>
+<head>
+  <div id="header">
+    <h1>Where To Go </h1>
   </div>
-  
-  <ul class="w3-container w3-center">
-      <!-- <input class="w3-input w3-round-large w3-border" name="address" type="text" placeholder="ENTER ADDRESS"></br> -->
-        
-      <form autocomplete="off" onsubmit="myFuckingFunction()">
-        <div class="autocomplete" style="width:300px;margin:auto">
-          <input id="myInput" type="text" name="myPlaces" placeholder="Address">
-        </div>
-        <br>
-        <!-- <input id="myInputButton" type="submit"> -->
-      </form>    
-      <!-- <button id="searchBtn" class="w3-round-large w3-button w3-border" onclick="window.location.href='searching_category.html'">Search</button> -->
-      <button id="searchBtn" class="w3-round-large w3-button w3-border">Search</button>
-    </ul>
-    <script>
-        autocomplete(document.getElementById("myInput"), countries);
-    </script>
-    
-  <br>
+</head>
+
+<body>
   <div class="w3-container w3-center">
-    <button class="w3-button w3-round-large w3-border" onclick="window.location.href='restroom.html'" style=" background:white"><i class="w3-xlarge fa fa-toilet-paper" style=""></i><br>Restroom</button>
-    <button class="w3-button w3-round-large w3-border" onclick="window.location.href='classroom.html'" style="background:white"><i class="w3-xlarge fas fa-book-open" style=""></i><br>Classroom</button>
-    <button class="w3-button w3-round-large w3-border" onclick="window.location.href='other_catergories.html'" style=" background:white"><i class="w3-xlarge fas fa-ellipsis-h" style=""></i><br>Other</button>
+    <button class="w3-button w3-round-large w3-border w3-border-black" onclick="window.location.href='restroom.html'" style="background:white;"><i class="w3-xxlarge fa fa-toilet-paper" ></i><br>Restroom</button>
+    <br>
+    <button class="w3-button w3-round-large w3-border w3-border-black" onclick="window.location.href='classroom.html'" style="background:white"><i class="w3-xxlarge fas fa-book-open" ></i><br>Classroom</button>
+    <br>
+    <button class="w3-button w3-round-large w3-border w3-border-black" onclick="window.location.href='other_catergories.html'" style=" background:white"><i class="w3-xxlarge fas fa-ellipsis-h" ></i><br>Other</button>
+    <br>
+    <button class="w3-button w3-round-large w3-border w3-border-black" onclick="window.location.href='search.html'" style=" background:white"><i class="w3-xxlarge far fa-search" ></i><br>Search</button>
+
   </div>
 
 </body>

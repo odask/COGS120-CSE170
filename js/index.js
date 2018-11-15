@@ -123,6 +123,6 @@ $(document).ready(function() {
           window.location.href='map.html';
           window.localStorage.setItem('place', 'csb');
         }
-        
-    }); 
+
+    });
 });

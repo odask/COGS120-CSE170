@@ -1,3 +1,12 @@
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    padding-top: 8%;
+    font-size: 40px;
+    text-align: center;
+  }
+}
 .room_preferences1 {
   display: none;
 }

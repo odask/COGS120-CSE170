@@ -40,6 +40,9 @@ $(document).ready(function(){
         else if (this.value == "other"){
             window.location.href='other_catergories.html';
         }
+        else if (this.value == "search"){
+            window.location.href='search.html';
+        }
      });
 
      $('#dropdown_floor').on("change", function() {

@@ -37,6 +37,9 @@ $(document).ready(function(){
        if (this.value == "classroom"){
            window.location.href='classroom.html';
        }
+       else if (this.value == "search"){
+           window.location.href='search.html';
+       }
        else if (this.value == "other"){
            window.location.href='other_catergories.html';
        }
@@ -60,7 +63,7 @@ $(document).ready(function(){
        //Get Near me checkbox value(T/F)
        var nearMe = $('input[name=nearme]').prop('checked');
        if (nearMe){
-            
+
             console.log("NearMe checked");
             console.log(nearMe);
             localStorage.setItem('nearMe', nearMe);
@@ -84,12 +87,12 @@ $(document).ready(function(){
            //Get the building
            localStorage.setItem('building', location[0].value);
        }
-      
-       
+
+
        //save them in local storage
        //localStorage.setItem('preference', pref[0].value);
        localStorage.setItem('preference2', JSON.stringify(checkboxValues));
-       
+
        //go to searching_category_template
        window.location.href='searching_category_template.html';
        });

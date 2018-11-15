@@ -1,5 +1,5 @@
  $(document).ready(function(){
-    
+
     var room_expanded = false;
     var building_expanded = false;
     $("#plus_other_places").click(function(){
@@ -12,10 +12,10 @@
             $("#otherplace").slideToggle();
             room_expanded = false;
             $('#plus_other_places').attr('src', 'icons/add-plus-button.png');
-            
+
 
         }
-       
+
     });
     $("#plus_building").click(function(){
         if (!building_expanded){
@@ -53,9 +53,9 @@
         }
 
 
-            
 
-        
+
+
     });
 
 /*    $("#dropdown").on("change", function() {
@@ -72,6 +72,9 @@
         }
         else if (this.value == "classroom"){
             window.location.href='classroom.html';
+        }
+        else if (this.value == "search"){
+            window.location.href='search.html';
         }
      });
 
