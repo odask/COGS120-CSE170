@@ -1,7 +1,21 @@
 $(document).ready(function(){
-   $("#building_preference").click(function(){
-       $(".subMenu").slideToggle();
-   });
+  var building_expanded = false;
+  $("#plus_building").click(function(){
+      if (!building_expanded){
+          $("#buildingpreference").slideToggle();
+          building_expanded = true;
+          $('#plus_building').attr('src', 'icons/minus-button.png');
+      }
+      else {
+          $("#buildingpreference").slideToggle();
+          building_expanded = false;
+          $('#plus_building').attr('src', 'icons/add-plus-button.png');
+
+      }
+
+  });
+
+   
 
    $("input[name=building]:radio").click(function () {
          if ($('input[name=building]:checked').val() == "geisel") {
