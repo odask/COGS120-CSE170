@@ -21,7 +21,7 @@ jQuery(function($) {
     $("#building_name").text("Cognitive Science Building");
   }
 
-  
+
   if (preference.length > 0) {
     console.log("we did this");
     console.log(preference);
@@ -50,7 +50,7 @@ jQuery(function($) {
     //   $(".option2").hide();
     // }
   }
-    
+
 
   $(".option1").click(function() {
     $(this).next(".decription").stop().slideToggle(500);
@@ -82,7 +82,7 @@ jQuery(function($) {
       window.location.href='map.html';
       });
 
-  
+
   $("#nearMeBtn").click(function() {
     window.localStorage.setItem('place', 'csb');
     window.location.href='map.html';
