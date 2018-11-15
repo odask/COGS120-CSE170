@@ -2,6 +2,7 @@ $(document).ready(function(){
 
    var pref_expanded = false;
    var building_expanded = false;
+   var toast = document.getElementById("snackbar");
    $("#plus_preferences").click(function(){
        if (!pref_expanded){
            $("#bathpreference").slideToggle();
@@ -100,14 +101,25 @@ $(document).ready(function(){
 
            //throw an error if location and preferences are both empty
            if (location.length == 0 || checkboxValues.length == 0){
-                var toast = document.getElementById("snackbar");
+            $('#snackbar').text("Please select a building or preferences.");
                 toast.className = "show";
                 // After 3 seconds, remove the show class from DIV
                 setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
                 return;
            }
            //Get the building
+           if (location[0].value == 'Price Center'){
+               console.log("I got to this part");
+                $('#snackbar').text("Building coming soon. Sorry!");
+                toast.className = "show";
+                // After 3 seconds, remove the show class from DIV
+                setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+                return;
+
+           }
            localStorage.setItem('building', location[0].value);
+
+           
        }
 
 
