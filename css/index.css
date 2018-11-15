@@ -11,8 +11,8 @@
   h1 {
     font-family: 'Merriweather', serif;
     font-weight: bolder;
-    padding-top: 15%;
-    margin: 8%;
+    /* padding-top: 15%;
+    margin: 8%; */
     font-size: 60px;
     text-align: center;
   }
