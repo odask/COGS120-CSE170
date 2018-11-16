@@ -58,3 +58,7 @@
     display: table;
     clear: both;
 }
+h2 {
+  font-family: Merriweather, serif;
+  font-size: 170%;
+}

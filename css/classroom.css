@@ -16,19 +16,45 @@
 }
 
 .first_floor {
+  font-family: Merriweather, serif;
+  font-size: 130%
   max-height:130px;
   overflow:auto;
 }
 
 .second_floor {
+  font-family: Merriweather, serif;
+  font-size: 130%
   display: none;
   max-height:130px;
   overflow:auto;
 
 }
+#buildingpreference{
+  font-family: Merriweather, serif;
+  font-size: 120%
+}
+#geiselRooms{
+  font-family: Merriweather, serif;
+  font-size: 130%
+}
+#building {
+  font-family: Merriweather, serif;
+  font-size: 170%;
+}
+#room_preference1{
+  font-family: Merriweather, serif;
+  font-size: 170%;
+}
+#room_preference2{
+  font-family: Merriweather, serif;
+  font-size: 170%;
+}
 
 #searchBtn {
   display: none;
+  font-family: Merriweather, serif;
+  font-size: 130%;
 }
 
 .first_floor {
@@ -39,18 +65,21 @@
   display: none;
 }
 
-.button5 {
-    background-color: white;
-    color: black;
-    border: 1px solid #555555;
-    padding: 5px;
-    border-radius: 5px;
-}
 #dropdown_floor{
   margin-bottom: 10px;
+  font-family: Merriweather, serif;
+  font-size: 120%;
 }
 #buildingpreference {
   display: none;
+}
+#dropdown{
+  font-family: Merriweather, serif;
+  font-size: 120%;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
  /* The snackbar - position it at the bottom and in the middle of the screen */
  #snackbar {
@@ -96,5 +125,4 @@
 @keyframes fadeout {
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
-} 
-
+}

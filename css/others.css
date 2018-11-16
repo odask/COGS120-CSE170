@@ -27,10 +27,34 @@
  }
  #otherplace {
    display: none;
+   font-family: Merriweather, serif;
+   font-size: 130%;
  }
 
  #buildingPreference {
    display: none;
+   font-family: Merriweather, serif;
+   font-size: 130%;
+ }
+ #dropdown {
+   font-family: Merriweather, serif;
+   font-size: 120%;
+   border-bottom: 1px solid black;
+   border-top: 1px solid black;
+   border-left: 1px solid black;
+   border-right: 1px solid black;
+ }
+ #nearme {
+   font-family: Merriweather, serif;
+   font-size: 120%;
+ }
+ #otherrooms {
+   font-family: Merriweather, serif;
+   font-size: 170%;
+ }
+ #building {
+   font-family: Merriweather, serif;
+   font-size: 170%;
  }
 
   .button5 {
@@ -84,4 +108,4 @@
 @keyframes fadeout {
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
-} 
+}

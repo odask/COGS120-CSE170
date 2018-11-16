@@ -16,7 +16,7 @@ $(document).ready(function(){
 
   });
 
-   
+
 
    $("input[name=building]:radio").click(function () {
          if ($('input[name=building]:checked').val() == "geisel") {
@@ -75,7 +75,7 @@ $(document).ready(function(){
         //Get the value
         if ($('input[name=building]:checked').val() == "centerhall") {
             //throw an error
-            
+
             $('#snackbar').text("Building coming soon. Sorry!");
             toast.className = "show";
             // After 3 seconds, remove the show class from DIV
@@ -84,6 +84,6 @@ $(document).ready(function(){
         }
         localStorage.setItem('place', 'Classroom');
         window.location.href='map.html';
-        
+
      });
 });

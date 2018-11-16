@@ -9,12 +9,35 @@
   }
   #bathpreference {
     display: none;
+    font-family: Merriweather, serif;
+    font-size: 130%;
   }
 
   #buildingPreference {
     display: none;
+    font-family: Merriweather, serif;
+    font-size: 130%;
   }
-  
+  #dropdown {
+    font-family: Merriweather, serif;
+    font-size: 120%;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+  }
+  #nearme {
+    font-family: Merriweather, serif;
+    font-size: 120%;
+  }
+  #preferences {
+    font-family: Merriweather, serif;
+    font-size: 170%;
+  }
+  #building {
+    font-family: Merriweather, serif;
+    font-size: 170%;
+  }
 @media only screen and (max-width: 600px) {
   h1 {
     font-family: 'Merriweather', serif;
@@ -69,4 +92,4 @@
 @keyframes fadeout {
   from {bottom: 30px; opacity: 1;}
   to {bottom: 0; opacity: 0;}
-} 
+}

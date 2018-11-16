@@ -51,7 +51,7 @@ $(document).ready(function(){
             //hide building
             $('#buildingDiv').fadeOut();
             $('#building').fadeOut();
-        }  
+        }
         else
            //show building selection when nearme is unchecked
            $('#buildingDiv').show();
@@ -119,7 +119,7 @@ $(document).ready(function(){
            }
            localStorage.setItem('building', location[0].value);
 
-           
+
        }
 
 
@@ -141,4 +141,4 @@ function myFunction() {
 
     // After 3 seconds, remove the show class from DIV
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-} 
+}

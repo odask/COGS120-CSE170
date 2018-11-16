@@ -64,7 +64,7 @@
             //hide building
             $('#buildingDiv').fadeOut();
             $('#building').fadeOut();
-        }  
+        }
         else
            //show building selection when nearme is unchecked
            $('#buildingDiv').show();
