@@ -2,6 +2,7 @@
 
     var room_expanded = false;
     var building_expanded = false;
+    var toast = document.getElementById("snackbar");
     $("#plus_other_places").click(function(){
         if (!room_expanded){
             $("#otherplace").slideToggle();
@@ -49,7 +50,11 @@
             window.location.href='map.html';
         }
         else {
-            window.location.href='other_searching_list.html';
+            $('#snackbar').text("Building coming soon. Sorry!");
+            toast.className = "show";
+            // After 3 seconds, remove the show class from DIV
+            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+            return;
         }
 
     });
