@@ -45,8 +45,35 @@
 
         console.log(places);
         console.log(locations);
+        if (places.length == 0 && locations.length == 0){
+            $('#snackbar').text("Please select a type and building.");
+            toast.className = "show";
+            // After 3 seconds, remove the show class from DIV
+            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+            return; 
+        } else if (places.length == 0){
+            $('#snackbar').text("Please select a type.");
+            toast.className = "show";
+            // After 3 seconds, remove the show class from DIV
+            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+            return;
+        } else if (locations.length == 0){
+            $('#snackbar').text("Please select a building.");
+            toast.className = "show";
+            // After 3 seconds, remove the show class from DIV
+            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+            return;
+        } 
         if (places == 'foodplaces' && locations == 'geisel'){
             window.localStorage.setItem('place', 'audreys');
+            window.location.href='map.html';
+        }
+        else if (places == 'studyroom' && locations == 'geisel'){
+            window.localStorage.setItem('place', 'geisel_study');
+            window.location.href='map.html';
+        }
+        else if (places == 'nursingroom' && locations == 'geisel'){
+            window.localStorage.setItem('place', 'nursing');
             window.location.href='map.html';
         }
         else {
