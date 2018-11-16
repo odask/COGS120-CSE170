@@ -11,9 +11,9 @@
   h1 {
     font-family: 'Merriweather', serif;
     font-weight: bolder;
-    /* padding-top: 15%;
-    margin: 8%; */
-    font-size: 60px;
+    padding-top: 2%;
+    margin: 8%;
+    font-size: 270%;
     text-align: center;
   }
 }
@@ -30,10 +30,10 @@ body {
 
 button {
   font-family: 'Merriweather', serif;
-  font-size: 30px;
-  width: 200px;
-  height: 130px;
-  margin: 8px;
+  font-size: 100%;
+  width: 50%;
+  height: 300%;
+  margin: 3%;
   white-space: normal;
   -webkit-appearance: none;
   word-break: normal;

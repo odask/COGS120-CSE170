@@ -34,7 +34,7 @@ jQuery(function($) {
 
   if (preference.includes("Gender Neutral")){
     console.log("Gender neutral option");
-    $("#bathroom_name1").text("BATHROOM");
+    $("#bathroom_name1").text("Bathroom");
     $(".option2").hide();
     $(".nearMe").hide();
 
