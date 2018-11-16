@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+  var toast = document.getElementById("snackbar");
   $("#dropdown").on("change", function() {
        if (this.value == "bathroom"){
            window.location.href='restroom.html';
@@ -24,6 +26,13 @@ $(document).ready(function(){
     else if (searchBar_input == "CSB" || searchBar_input == "Cognitive Science Building"){
       window.location.href='map.html';
       window.localStorage.setItem('place', 'csb');
+    }
+    else {
+      $('#snackbar').text("Building coming soon.Try Geisel for now ;)");
+                toast.className = "show";
+                // After 3 seconds, remove the show class from DIV
+                setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+                return;
     }
 
 });
