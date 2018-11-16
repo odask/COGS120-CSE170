@@ -3,6 +3,7 @@ $(document).ready(function(){
    var pref_expanded = false;
    var building_expanded = false;
    var toast = document.getElementById("snackbar");
+   var nearMe = false;
    console.log("I'm in restroom.js");
    $("#plus_preferences").click(function(){
        if (!pref_expanded){
@@ -54,12 +55,14 @@ $(document).ready(function(){
             //alert("Test checked");
             $('#buildingDiv').fadeOut();
             $('#building').fadeOut();
+            nearMe = true;
         }
         else{
            //show building selection when nearme is unchecked
-           //alert("Test not checked");   
+           alert("Test not checked");   
            $('#buildingDiv').show();
            $('#building').show();
+           //nearMe = false;
         }
     });
     
@@ -82,9 +85,8 @@ $(document).ready(function(){
        var location = $('input[name="location"]:checked');
        console.log(location.length);
        //Get Near me checkbox value(T/F)
-       var nearMe = $('input[name=nearme]').prop('checked');
+       //var nearMe = $('#myForm input[name=nearme]').prop('checked');
        if (nearMe){
-
             console.log("NearMe checked");
             console.log(nearMe);
             localStorage.setItem('nearMe', nearMe);
@@ -100,7 +102,6 @@ $(document).ready(function(){
                 console.log("Else clause");
                 localStorage.setItem('building', "none");
             }
-
        } else {
            console.log("NearMe NOT checked");
            localStorage.setItem('nearMe', false);

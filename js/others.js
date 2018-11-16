@@ -3,6 +3,7 @@
     var room_expanded = false;
     var building_expanded = false;
     var toast = document.getElementById("snackbar");
+    var nearMe = false;
     $("#plus_other_places").click(function(){
         if (!room_expanded){
             $("#otherplace").slideToggle();
@@ -45,17 +46,67 @@
 
         console.log(places);
         console.log(locations);
-        if (places == 'foodplaces' && locations == 'geisel'){
-            window.localStorage.setItem('place', 'audreys');
-            window.location.href='map.html';
-        }
-        else {
-            $('#snackbar').text("Building coming soon. Sorry!");
+        if (places.length == 0 && locations.length == 0 && nearMe == false){
+            $('#snackbar').text("Please select a type and building.");
+            toast.className = "show";
+            // After 3 seconds, remove the show class from DIV
+            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+            return; 
+        } else if (places.length == 0){
+            $('#snackbar').text("Please select a type.");
+            toast.className = "show";
+            // After 3 seconds, remove the show class from DIV
+            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+            return;
+        } else if (locations.length == 0 && nearMe == false){
+            $('#snackbar').text("Please select a building.");
             toast.className = "show";
             // After 3 seconds, remove the show class from DIV
             setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
             return;
         }
+        if (nearMe){
+            console.log("Near me switch");
+            console.log(places);
+            console.log(places[0]);
+            switch(places[0]){
+                case 'foodplaces':
+                    window.localStorage.setItem('place', 'audreys');
+                    window.location.href='map.html';
+                    break;
+                case 'studyroom':
+                    window.localStorage.setItem('place', 'geisel_study');
+                    window.location.href='map.html';
+                    break;
+                case 'nursingroom':
+                    window.localStorage.setItem('place', 'nursing');
+                    window.location.href='map.html';
+                    break;
+            }
+        }
+        else {
+            if (places == 'foodplaces' && locations == 'geisel'){
+                window.localStorage.setItem('place', 'audreys');
+                window.location.href='map.html';
+            }
+            else if (places == 'studyroom' && locations == 'geisel'){
+                window.localStorage.setItem('place', 'geisel_study');
+                window.location.href='map.html';
+            }
+            else if (places == 'nursingroom' && locations == 'geisel'){
+                window.localStorage.setItem('place', 'nursing');
+                window.location.href='map.html';
+            }
+            else {
+                $('#snackbar').text("Building coming soon. Sorry!");
+                toast.className = "show";
+                // After 3 seconds, remove the show class from DIV
+                setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+                return;
+            }
+
+        } 
+       
 
     });
 
@@ -77,12 +128,14 @@
             //alert("Test checked");
             $('#buildingDiv').fadeOut();
             $('#building').fadeOut();
+            nearMe = true;
         }
         else{
            //show building selection when nearme is unchecked
            //alert("Test not checked");   
            $('#buildingDiv').show();
            $('#building').show();
+           nearMe = false;
         }
     });
 
