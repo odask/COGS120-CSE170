@@ -59,17 +59,32 @@
 
     });
 
-    $('input[name=nearme]:checkbox').change(function(){
+    // $('input[name=nearme]:checkbox').change(function(){
+    //     if(this.checked){
+    //         //hide building
+    //         $('#buildingDiv').fadeOut();
+    //         $('#building').fadeOut();
+    //     }
+    //     else
+    //        //show building selection when nearme is unchecked
+    //        $('#buildingDiv').show();
+    //        $('#building').show();
+    //  });
+
+     $('#myForm input[type="checkbox"]').change(function() {
         if(this.checked){
             //hide building
+            //alert("Test checked");
             $('#buildingDiv').fadeOut();
             $('#building').fadeOut();
         }
-        else
+        else{
            //show building selection when nearme is unchecked
+           //alert("Test not checked");   
            $('#buildingDiv').show();
            $('#building').show();
-     });
+        }
+    });
 
 
 /*    $("#dropdown").on("change", function() {
