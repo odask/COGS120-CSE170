@@ -1,5 +1,6 @@
 $(document).ready(function(){
   var building_expanded = false;
+  var toast = document.getElementById("snackbar");
   $("#plus_building").click(function(){
       if (!building_expanded){
           $("#buildingpreference").slideToggle();
@@ -41,7 +42,7 @@ $(document).ready(function(){
      });
 
      $("input[name=room]:radio").click(function() {
-       if($('input[name=room]:checked').val() == "101"){
+       if($('input[name=room]:checked')){
          $('#searchBtn').show();
        }
 
@@ -71,8 +72,18 @@ $(document).ready(function(){
      });
 
      $('#searchBtn').click(function (){
+        //Get the value
+        if ($('input[name=building]:checked').val() == "centerhall") {
+            //throw an error
+            
+            $('#snackbar').text("Building coming soon. Sorry!");
+            toast.className = "show";
+            // After 3 seconds, remove the show class from DIV
+            setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+            return;
+        }
         localStorage.setItem('place', 'Classroom');
         window.location.href='map.html';
-
+        
      });
 });
