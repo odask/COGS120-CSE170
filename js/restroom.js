@@ -3,6 +3,7 @@ $(document).ready(function(){
    var pref_expanded = false;
    var building_expanded = false;
    var toast = document.getElementById("snackbar");
+   console.log("I'm in restroom.js");
    $("#plus_preferences").click(function(){
        if (!pref_expanded){
            $("#bathpreference").slideToggle();
@@ -46,17 +47,24 @@ $(document).ready(function(){
        }
     });
 
-    $('input[name=nearme]:checkbox').change(function(){
+   
+     $('#myForm input[type="checkbox"]').change(function() {
         if(this.checked){
             //hide building
+            //alert("Test checked");
             $('#buildingDiv').fadeOut();
             $('#building').fadeOut();
         }
-        else
+        else{
            //show building selection when nearme is unchecked
+           //alert("Test not checked");   
            $('#buildingDiv').show();
            $('#building').show();
-     });
+        }
+    });
+    
+
+
 
    //what does clicking search do?
    //gets the preference and building
