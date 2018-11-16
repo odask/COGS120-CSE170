@@ -33,7 +33,6 @@
 
 <ul class="w3-container w3-center">
     <!-- <input class="w3-input w3-round-large w3-border" name="address" type="text" placeholder="ENTER ADDRESS"></br> -->
-
     <form autocomplete="off" onsubmit="myFuckingFunction()">
       <div class="autocomplete" style="width:300px;margin:auto">
         <input id="myInput" type="text" name="myPlaces" placeholder=" Address">
@@ -45,6 +44,25 @@
     <button id="searchBtn" class="w3-round-large w3-button w3-border w3-border-black" >Search</button>
   <script>
       autocomplete(document.getElementById("myInput"), countries);
+
+      var get_search_input = document.getElementById("searchBtn");
+      get_search_input.addEventListener("click", storeIt, false);
+
+      var searches = document.getElementById('myInput');
+
+      function storeIt() {
+          for (var i = 0; i < searches.length; i++) {
+            var input_search = searches[i].value;
+            if(input_search == '') {
+              alert("Enter content.");
+              return false;
+            }
+            var storeName = searches[i].className + [i];
+            localStorage.setItem(storeName, input_search);
+          }
+          console.log("Content saved" + storeName);
+        }
   </script>
+
 </body>
 </html>
