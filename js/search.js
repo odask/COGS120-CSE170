@@ -1,5 +1,16 @@
 $(document).ready(function(){
 
+  //If guest is true, hide the profile icon
+  var guest = window.localStorage.getItem('guest');
+  console.log(guest);
+  if (guest == 'true'){
+      console.log("Guest is true");
+      //hide the profile icon 
+      $('#profileBtn').hide();
+  }
+  else {
+      console.log("Guest is false");
+  }
   var toast = document.getElementById("snackbar");
   $("#dropdown").on("change", function() {
        if (this.value == "bathroom"){

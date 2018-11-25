@@ -1,9 +1,33 @@
  $(document).ready(function(){
 
+    //If guest is true, hide the profile icon
+    var guest = window.localStorage.getItem('guest');
+    console.log(guest);
+    if (guest == 'true'){
+        console.log("Guest is true");
+        //hide the profile icon 
+        $('#profileBtn').hide();
+    }
+    else {
+        console.log("Guest is false");
+    }
     var room_expanded = false;
     var building_expanded = false;
     var toast = document.getElementById("snackbar");
     var nearMe = false;
+
+    //If guest is true, hide the profile icon
+   var guest = window.localStorage.getItem('guest');
+   console.log(guest);
+   if (guest == 'true'){
+       console.log("Guest is true");
+       //hide the profile icon 
+       $('#profileBtn').hide();
+   }
+   else {
+       console.log("Guest is false");
+   }
+
     $("#plus_other_places").click(function(){
         if (!room_expanded){
             $("#otherplace").slideToggle();

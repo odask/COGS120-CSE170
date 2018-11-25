@@ -1,5 +1,16 @@
 jQuery(function($) {
 
+  //If guest is true, hide the profile icon
+  var guest = window.localStorage.getItem('guest');
+  console.log(guest);
+  if (guest == 'true'){
+      console.log("Guest is true");
+      //hide the profile icon 
+      $('#profileBtn').hide();
+  }
+  else {
+      console.log("Guest is false");
+  }
   //local storage check
   console.log("Getting items from local storage");
   //var preference = localStorage.getItem('preference');
