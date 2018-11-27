@@ -5,6 +5,19 @@ $(document).ready(function(){
    var toast = document.getElementById("snackbar");
    var nearMe = false;
    console.log("I'm in restroom.js");
+
+   //If guest is true, hide the profile icon
+   var guest = window.localStorage.getItem('guest');
+   console.log(guest);
+   if (guest == 'true'){
+       console.log("Guest is true");
+       //hide the profile icon 
+       $('#profileBtn').hide();
+   }
+   else {
+       console.log("Guest is false");
+   }
+   
    $("#plus_preferences").click(function(){
        if (!pref_expanded){
            $("#bathpreference").slideToggle();
