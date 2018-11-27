@@ -109,6 +109,8 @@ function autocomplete(inp, arr) {
 }
 
 $(document).ready(function() {
+   //set guest as true by default
+   window.localStorage.setItem('guest', true);
     $("#searchBtn").click(function(){
         console.log("searchBtn func");
         //Get the value from the search bar
