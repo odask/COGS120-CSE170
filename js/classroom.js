@@ -5,15 +5,15 @@ $(document).ready(function(){
   console.log(guest);
   if (guest == 'true'){
       console.log("Guest is true");
-      //hide the profile icon 
+      //hide the profile icon
       $('#profileBtn').hide();
   }
   else {
       console.log("Guest is false");
-  }  
+  }
   var building_expanded = false;
   var toast = document.getElementById("snackbar");
-  $("#plus_building").click(function(){
+  $("#building").click(function(){
       if (!building_expanded){
           $("#buildingpreference").slideToggle();
           building_expanded = true;
