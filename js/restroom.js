@@ -11,14 +11,14 @@ $(document).ready(function(){
    console.log(guest);
    if (guest == 'true'){
        console.log("Guest is true");
-       //hide the profile icon 
+       //hide the profile icon
        $('#profileBtn').hide();
    }
    else {
        console.log("Guest is false");
    }
-   
-   $("#plus_preferences").click(function(){
+
+   $("#preferences").click(function(){
        if (!pref_expanded){
            $("#bathpreference").slideToggle();
            pref_expanded = true;
@@ -33,7 +33,7 @@ $(document).ready(function(){
        }
 
    });
-   $("#plus_building").click(function(){
+   $("#building").click(function(){
        if (!pref_expanded){
            $("#buildingPreference").slideToggle();
            pref_expanded = true;
@@ -61,7 +61,7 @@ $(document).ready(function(){
        }
     });
 
-   
+
      $('#myForm input[type="checkbox"]').change(function() {
         if(this.checked){
             //hide building
@@ -72,13 +72,13 @@ $(document).ready(function(){
         }
         else{
            //show building selection when nearme is unchecked
-           alert("Test not checked");   
+           alert("Test not checked");
            $('#buildingDiv').show();
            $('#building').show();
            //nearMe = false;
         }
     });
-    
+
 
 
 
