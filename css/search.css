@@ -1,14 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300);
+@import url(https://fonts.googleapis.com/css?family=Squada+One);
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Cinzel:900|Roboto:400,700');
+
+/*
+light blue: #C3D0E8
+dark blue: #3C5379
+grey: #3D4043
+*/
+
+body {
+  background-color: #C3D0E8;
+}
 @media only screen and (max-width: 600px) {
   h1 {
-    font-family: 'Merriweather', serif;
-    font-weight: bold;
-    padding-top: 8%;
-    font-size: 40px;
+    font-family: 'Cinzel', serif;
+    color: #3D4043;
+    font-weight: 900;
+    padding-top: 10%;
+    margin: 4%;
+    font-size: 270%;
     text-align: center;
   }
 }
 #dropdown {
-  font-family: Merriweather, serif;
+  font-family: 'Roboto', sans-serif;
+  background-color: #3C5379;
+  color: white;
   font-size: 120%;
   border-bottom: 1px solid black;
   border-top: 1px solid black;
@@ -16,7 +34,7 @@
   border-right: 1px solid black;
 }
 #myInput {
-  font-family: Merriweather, serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 120%;
   margin-top: 5% !important;
   border-bottom: 1px solid black;
@@ -26,6 +44,12 @@
 }
 #dropdown_floor{
   margin-bottom: 10px;
+}
+#searchBtn {
+  background-color: #3C5379;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+
 }
 
 
