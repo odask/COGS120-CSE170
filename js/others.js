@@ -28,32 +28,31 @@
        console.log("Guest is false");
    }
 
-    $("#plus_other_places").click(function(){
+    $("#otherrooms").click(function(){
         if (!room_expanded){
             $("#otherplace").slideToggle();
             room_expanded = true;
-            $('#plus_other_places').attr('src', 'icons/minus-button.png');
+            $("#otherrooms").text("Other Places -");
         }
         else {
             $("#otherplace").slideToggle();
             room_expanded = false;
-            $('#plus_other_places').attr('src', 'icons/add-plus-button.png');
-
+            $("#otherrooms").text("Other Places +");
 
         }
 
     });
-    $("#plus_building").click(function(){
+    $("#building").click(function(){
         if (!building_expanded){
             $("#buildingPreference").slideToggle();
             building_expanded = true;
-            $('#plus_building').attr('src', 'icons/minus-button.png');
+            $('#building').text("Building -");
 
         }
         else {
             $("#buildingPreference").slideToggle();
             building_expanded = false;
-            $('#plus_building').attr('src', 'icons/add-plus-button.png');
+            $('#building').text("Building +");
         }
     });
 
