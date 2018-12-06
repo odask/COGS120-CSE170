@@ -123,7 +123,7 @@ $(document).ready(function(){
 
            //throw an error if location and preferences are both empty
            if (location.length == 0 || checkboxValues.length == 0){
-            $('#snackbar').text("Please select a building or preferences.");
+            $('#snackbar').text("Please select a building and preferences.");
                 toast.className = "show";
                 // After 3 seconds, remove the show class from DIV
                 setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
