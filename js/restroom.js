@@ -22,28 +22,30 @@ $(document).ready(function(){
        if (!pref_expanded){
            $("#bathpreference").slideToggle();
            pref_expanded = true;
-           $('#plus_preferences').attr('src', 'icons/minus-button.png');
+           $('#preferences').text("Preferences -");
        }
        else {
            $("#bathpreference").slideToggle();
            pref_expanded = false;
-           $('#plus_preferences').attr('src', 'icons/add-plus-button.png');
+           $('#preferences').text("Preferences +");
+          
 
 
        }
 
    });
    $("#building").click(function(){
-       if (!pref_expanded){
+       if (!building_expanded){
            $("#buildingPreference").slideToggle();
-           pref_expanded = true;
-           $('#plus_building').attr('src', 'icons/minus-button.png');
+           building_expanded = true;
+           $('#building').text("Building -");
 
        }
        else {
            $("#buildingPreference").slideToggle();
-           pref_expanded = false;
-           $('#plus_building').attr('src', 'icons/add-plus-button.png');
+           $('#building').text("Building +");
+           building_expanded = false;
+           
        }
    });
 
