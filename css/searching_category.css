@@ -1,18 +1,68 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300);
+@import url(https://fonts.googleapis.com/css?family=Squada+One);
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+@import url('https://fonts.googleapis.com/css?family=Cinzel:900|Roboto:400,700');
+
+/*
+light blue: #C3D0E8
+dark blue: #3C5379
+grey: #3D4043
+*/
+
+body {
+  background-color: #C3D0E8;
+}
+h2 {
+  font-family: 'Roboto', sans-serif;
+  color: #3D4043;
+  font-size: 150%;
+}
+#building_name {
+  font-family: 'Roboto', sans-serif;
+  color: #3D4043;
+  font-size: 155%;
+}
+
+#name {
+  font-family: 'Roboto', sans-serif;
+  color: #3D4043;
+  font-size: 180%;
+}
+#bathroom1 {
+  background-color: #3C5379;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 150%;
+}
+#bathroom2 {
+  background-color: #3C5379;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 150%;
+}
+#nearMeBtn {
+  background-color: #3C5379;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 150%;
+}
 .nearMe{
-  font-family: 'Merriweather', serif;
-  font-size: 30px;
-  background:#eee;
+  font-family: 'Roboto', sans-serif;
+  font-size: 150%;
+  background-color: #3C5379;
+  color: white;
   cursor:pointer;
   padding-top: 17px;
   padding-bottom: 17px;
-  padding-left: 5px;
+  padding-left: 20px;
   padding-right: 5px;
 }
 
 .option1{
-  font-family: 'Merriweather', serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 150%;
-  background:#eee;
+  background-color: #3C5379;
+  color: white;
   cursor:pointer;
   padding-top: 17px;
   padding-bottom: 17px;
@@ -28,9 +78,10 @@
 }
 
 .option2{
-  font-family: 'Merriweather', serif;
-  font-size: 24px;
-  background:lightgray;
+  font-family: 'Roboto', sans-serif;
+  font-size: 150%;
+  background:#3C5379;
+  color: white;
   cursor:pointer;
   padding-top: 17px;
   padding-bottom: 17px;
@@ -39,7 +90,7 @@
 }
 
 .decription2 {
-  background: lightgray;
+  background: #3C5379;
 }
 
 * {
@@ -59,6 +110,6 @@
     clear: both;
 }
 h2 {
-  font-family: Merriweather, serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 170%;
 }

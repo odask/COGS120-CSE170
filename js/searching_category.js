@@ -5,7 +5,7 @@ jQuery(function($) {
   console.log(guest);
   if (guest == 'true'){
       console.log("Guest is true");
-      //hide the profile icon 
+      //hide the profile icon
       $('#profileBtn').hide();
   }
   else {
@@ -38,9 +38,9 @@ jQuery(function($) {
     console.log(preference);
     $("#name").text(preference + " Bathroom");
   } else {
-    $("#bathroom_name1").text("Male,Female");
-    $("#bathroom_name2").text("Male,Female");
-    $("#csb_bathroom").text("Male,Female");
+    $("#bathroom_name1").text("Male, Female");
+    $("#bathroom_name2").text("Male, Female");
+    $("#csb_bathroom").text("Male, Female");
   }
 
   if (preference.includes("Gender Neutral")){
