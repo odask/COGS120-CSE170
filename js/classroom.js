@@ -15,14 +15,15 @@ $(document).ready(function(){
   var toast = document.getElementById("snackbar");
   $("#building").click(function(){
       if (!building_expanded){
+          $("#building").text("Building -");
           $("#buildingpreference").slideToggle();
           building_expanded = true;
-          $('#plus_building').attr('src', 'icons/minus-button.png');
+          
       }
       else {
           $("#buildingpreference").slideToggle();
           building_expanded = false;
-          $('#plus_building').attr('src', 'icons/add-plus-button.png');
+          $("#building").text("Building +");
 
       }
 
