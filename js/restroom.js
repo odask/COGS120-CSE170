@@ -74,7 +74,7 @@ $(document).ready(function(){
         }
         else{
            //show building selection when nearme is unchecked
-           alert("Test not checked");
+           //alert("Test not checked");
            $('#buildingDiv').show();
            $('#building').show();
            //nearMe = false;
